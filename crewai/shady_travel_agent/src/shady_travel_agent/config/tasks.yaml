@@ -1,0 +1,24 @@
+research_task:
+  description: >
+    Conduct thorough, up-to-date research about where to go in {topic} (treat {topic} as the city or destination).
+    Focus on:
+    - Top cafes (ambience, specialties), shopping areas (malls, markets, boutiques), and a few must-do activities.
+    - Neighborhood context, hours (if available), typical price range, and standout tips from recent sources.
+    - The current year is {current_year}; prioritize fresh info and cross-check multiple sources.
+  expected_output: >
+    A list of 10 concise bullet points covering the most relevant and interesting places/things to do in {topic}.
+    Each bullet should include: name, neighborhood, a short “why,” and an optional link if available.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Using the research, write an engaging markdown listicle for travelers visiting {topic}.
+    Requirements:
+    - Title + 1–2 sentence intro that sets the vibe.
+    - Numbered list of 5–8 standout items (mix of cafes, shopping, and activities).
+    - For each item: name, 1–2 sentence description (what/why), neighborhood, an optional price hint ($–$$$), and an optional link/map if provided.
+    - Keep it crisp; avoid fluff. Verify basic spelling and consistency.
+  expected_output: >
+    A polished markdown article (no code fences) with a clear title, short intro, numbered list (5–8 items) as specified,
+    and a 1–2 sentence closing.
+  agent: reporting_analyst
